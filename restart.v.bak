@@ -1,0 +1,23 @@
+module restart( scan_code, clk, restart, gameover, fail);
+	
+	 input [7:0] scan_code;
+	 
+    input clk;
+	 
+	 output reg restart, gameover, fail;
+	 
+	 parameter ENTER = 8'h5A;
+	 
+	initial restart <= 0;
+	
+	always @(posedge clk)
+			begin
+			if (scan_code == ENTER)
+				restart <= 1;
+				fail <= 0;
+				gameover <= 0;
+			end
+
+	
+
+endmodule 

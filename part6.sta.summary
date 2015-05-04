@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'U1|altpll_component|pll|clk[0]'
+Slack : -6.881
+TNS   : -621.307
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -3.322
+TNS   : -33.561
+
+Type  : Slow Model Setup 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -1.851
+TNS   : -29.495
+
+Type  : Slow Model Setup 'keyboard:kbd|clock'
+Slack : -0.745
+TNS   : -0.846
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.558
+TNS   : -2.884
+
+Type  : Slow Model Hold 'keyboard:kbd|clock'
+Slack : -2.148
+TNS   : -2.148
+
+Type  : Slow Model Hold 'U1|altpll_component|pll|clk[0]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'keyboard:kbd|keyboard_clk_filtered'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:kbd|clock'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : 17.518
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'U1|altpll_component|pll|clk[0]'
+Slack : 18.841
+TNS   : 0.000
+
+Type  : Fast Model Setup 'U1|altpll_component|pll|clk[0]'
+Slack : -3.538
+TNS   : -127.212
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -1.488
+TNS   : -14.436
+
+Type  : Fast Model Setup 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -0.368
+TNS   : -4.130
+
+Type  : Fast Model Setup 'keyboard:kbd|clock'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.599
+TNS   : -6.546
+
+Type  : Fast Model Hold 'keyboard:kbd|clock'
+Slack : -1.318
+TNS   : -1.318
+
+Type  : Fast Model Hold 'U1|altpll_component|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'keyboard:kbd|keyboard_clk_filtered'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:kbd|clock'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : 17.518
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'U1|altpll_component|pll|clk[0]'
+Slack : 18.841
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,73 @@
+module goose
+
+(
+
+    clk,gameover,
+
+    ready,column_addr,row_addr,
+
+    red1,green1,blue1
+
+);
+
+
+
+
+    input clk;
+
+    input gameover;
+
+    input ready;
+
+    input [10:0] column_addr;
+
+    input [10:0] row_addr;
+
+    output red;
+
+    output green;
+
+    output blue;
+
+    
+
+    reg issquare;
+
+    reg [10:0]begin_row = 11'd0;
+	 reg [10:0]end_row = 11'd80;
+	 reg [30:0]counter;
+	 
+	 	always @(posedge clk)
+	begin
+		if (counter == 25000000) 
+			begin
+			counter <= 0;
+			begin_row <= begin_row + 100;
+			end_row <= end_row + 100;
+			end
+		else 
+			begin
+			counter <= counter + 1;
+			end 
+	end 
+	
+   always @(begin_row, end_row, gameover)
+//		 if (gameover) begin
+//            issquare <= 1'b0; end
+		 if (column_addr >= 11'd320 && column_addr < 11'd440 &&  row_addr >= begin_row && row_addr < end_row)
+				begin
+				issquare <= 1'b1;
+				end			
+        else
+            issquare <= 1'b0;
+
+
+    assign red = ready && issquare ? 1'b1: 1'b0;
+
+    assign green = ready && issquare ? 1'b1 : 1'b0;
+
+    assign blue = ready && issquare ? 1'b1: 1'b0;
+
+    
+
+endmodule

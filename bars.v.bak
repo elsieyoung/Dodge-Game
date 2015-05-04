@@ -1,0 +1,27 @@
+module bars(input [9:0] x, input [9:0] y,
+	output [9:0] red, output [9:0] green, output [9:0] blue);
+reg [2:0] idx;
+reg [9:0]  vga_r;
+reg [9:0]  vga_g;
+reg [9:0]  vga_b;
+
+
+always @(x,y)
+	begin
+		if (x < 80 && y < 80) idx <= 3'd0;
+		else if (x >= 100 && x < 160 && y >= 100 && y < 160 && (((x-130)**2 + (y-130)**2) <= 30**2)) idx <= 3'd1;
+		else if (x >= 180 && x < 240 && y >= 180 && y < 240) idx <= 3'd2;
+		else if (x >= 260 && x < 320 && y >= 260 && y < 320) idx <= 3'd3;
+		else if (x >= 340 && x < 400 && y >= 340 && y < 400) idx <= 3'd4;
+		else if (x >= 420 && x < 480 && y >= 420 && y < 480) idx <= 3'd5;
+		else if (x >= 500 && x < 560 && y >= 500 && y < 560) idx <= 3'd6;
+		else idx <= 3'd7;
+	end
+      128;
+end*/
+
+assign red = (idx[0]? 10'h3ff: 10'h000);
+assign green = (idx[1]? 10'h3ff: 10'h000);
+assign blue = (idx[2]? 10'h3ff: 10'h000);
+
+endmodule
